@@ -1,11 +1,5 @@
-import requests #to obtain numbers in case user fails to do so
 import sys # for the receiving of the command line arguments
-
-def getRandom():
-    rawReturnedRandoms = requests.get('https://www.random.org/integers/?num=1&min=0&max=1000&col=1&base=10&format=plain&rnd=new')
-    rawReturnedQuota = requests.get('https://www.random.org/quota/?format=plain')
-    print('Quota Remaining:',rawReturnedQuota.text.strip(),' - (uses about 6.5k per run)')
-    return rawReturnedRandoms.text #the [:-1] clips the last comma off of this replacement.
+import dogRandom
 
 if len(sys.argv) == 1:
     print('Consider using the command line argument \'python3 ex4.py <number>')
@@ -15,13 +9,13 @@ if len(sys.argv) == 1:
         numberToBeDivided = int(input())
     except:
         print('Your entry was not a number. Defaulting to a random number.')
-        numberToBeDivided = int(getRandom())
+        numberToBeDivided = int(dogRandom.getRandom())
 else:
     try: #the command line argument is user input, too. Check it.
         numberToBeDivided = int(sys.argv[1])
     except:
         print('Your entry was not a number. Defaulting to a random number.')
-        numberToBeDivided = int(getRandom())
+        numberToBeDivided = int(dogRandom.getRandom())
 
 print('Perfect divisors for ',numberToBeDivided,':')
 
