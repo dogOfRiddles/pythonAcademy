@@ -9,15 +9,15 @@ howManySysRandom = 1000
 
 if len(sys.argv) > 1:
     howManyRandom = sys.argv[1] #if someone wants to force the issue, let them set the number
-    howManySysRandom = howManyRandom
+    howManySysRandom = int(howManyRandom)
 
+print('Collecting',howManySysRandom,'random values from Python\'s built in library')
 
 while howManySysRandom != 0: #build our Python offering
     sysRandomList.append(random.randint(0,9))
     howManySysRandom = howManySysRandom -1
 
 listOfRandoms = dogRandom.getRandomList(howManyRandom) #let the dogRandom take a shot
-print('Collecting',howManySysRandom,'random values from Python\'s built in library')
 print('Collecting',howManyRandom,'numbers from random.org, generated from atmospheric noise.')
 
 #print(refinedRandoms) #just to show our receipts, for debugging purposes
