@@ -1,4 +1,11 @@
 import dogRandom
+import subprocess
+
+def gatherSystemInfo():
+    p1 = subprocess.Popen(['uptime'], stdout=subprocess.PIPE)
+    # Run the command
+    output = p1.communicate()[0]
+    print(output[:-1])
 
 def palindromeCheck(potentialDrome):
     dromeLength = len(potentialDrome)

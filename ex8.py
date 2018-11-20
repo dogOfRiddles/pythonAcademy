@@ -1,6 +1,8 @@
 import sys
 import dogUtil
 
+dogUtil.gatherSystemInfo()
+
 if len(sys.argv) == 1 or len(sys.argv) == 2:
     print('Consider using the command line argument \'python3 <script> <argument> <argument>\'')
     print('Defaulting to "random"')
