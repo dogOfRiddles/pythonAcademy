@@ -1,6 +1,8 @@
 import sys # for the receiving of the command line arguments
 import dogRandom
 
+notPrime = False
+
 if len(sys.argv) == 1:
     print('Consider using the command line argument \'python3 ex4.py <number>')
     print('Please submit a number. We will provide its perfect divisors.')
@@ -24,3 +26,7 @@ divisors = range(1,numberToBeDivided) #the range() method returns the range of n
 for index,element in enumerate(divisors): #here's enumerate() again. Just in case we needed its index.
     if numberToBeDivided % element == 0:
         print(numberToBeDivided,'is divided by',element)
+        notPrime = True
+
+if notPrime: #this is for ex12
+    print('**Prime Number**')
