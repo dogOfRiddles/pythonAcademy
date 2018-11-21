@@ -1,5 +1,6 @@
 import sys
 import dogRandom
+import dogUtil
 
 argVariable = 0
 listToBeTested = []
@@ -28,9 +29,7 @@ print('Adding the last element to new list')
 listOfChosenOnes.append(listToBeTested[len(listToBeTested)-1])
 
 print('tested body of elements')
-for index,element in enumerate(listToBeTested):
-    print(index,':',element)
+dogUtil.walkList(listToBeTested)
 
 print('first and last elements')
-for index,element in enumerate(listOfChosenOnes):
-    print(index,':',element)
+dogUtil.walkList(listOfChosenOnes)

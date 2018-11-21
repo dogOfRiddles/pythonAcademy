@@ -1,6 +1,10 @@
 import dogRandom
 import subprocess
 
+def walkList(incomingList):
+    for index,element in enumerate(incomingList):
+        print(index,' : ',element)
+
 def gatherSystemInfo():
     p1 = subprocess.Popen(['uptime'], stdout=subprocess.PIPE)
     # Run the command
