@@ -1,6 +1,17 @@
 import dogRandom
 import subprocess
 
+def fibonacci(requestedLength):
+    if int(requestedLength < 2):
+        requestedLength = 2
+    depth = int(requestedLength) - 2 # to account for appends
+    builtList = [1,1]
+    marker = 0;
+    while depth != marker:
+        builtList.append((builtList[marker]+builtList[marker+1]))
+        marker = marker + 1
+    return builtList
+
 def walkList(incomingList):
     for index,element in enumerate(incomingList):
         print(index,' : ',element)
