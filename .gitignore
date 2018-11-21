@@ -1,1 +1,8 @@
 __pycache__/
+share/
+lib/
+lib64/
+include/
+bin/
+pyvenv.cfg
+academy_venv/
