@@ -4,6 +4,7 @@ import random
 
 argVariable = 0
 randomNumber = int(dogRandom.getRandom()) % 10
+randomNumber = randomNumber + 1 #a readable 1-10, plz
 
 if len(sys.argv) == 1:
     print('Consider using the command line argument \'python3 <script> <argument>\'')
@@ -19,8 +20,8 @@ if len(sys.argv) == 2:
 try:
     guess = int(input('Won\'t you make a guess at my number? Between 1 and 10.'))
 except:
-    print('That wasn\'t a number. Defaulting to a Python random')
     guess = random.randint(1,10)
+    print('That wasn\'t a number. Defaulting to a Python random:',guess)
 
 print('You guessed',guess)
 
@@ -34,7 +35,7 @@ while guess != randomNumber:
             guess = int(input('Guess again:'))
         except:
             guess = random.randint(1,10)
-            print('That wasn\'t a number. Defaulting to a Python random')
+            print('That wasn\'t a number. Defaulting to a Python random:',guess)
 
 if guess == randomNumber:
     print('You got it:',randomNumber)
