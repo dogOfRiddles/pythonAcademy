@@ -1,5 +1,4 @@
 import dogUtil
-
 import sys
 
 argVariable = 10
