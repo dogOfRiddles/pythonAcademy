@@ -1,5 +1,7 @@
 import dogUtil
+import dogRandom
 
-unsortedList = [1,2,3,4,4,4,7,7,6,6,5,4]
+print('We\'ll pull random numbers to be stripped of duplicates')
+unsortedList = dogRandom.getRandomList(100,0,20)
 
-dogUtil.walkList(dogUtil.removeDuplicates(unsortedList))
+dogUtil.walkList((dogUtil.removeDuplicates(unsortedList)))

@@ -1,6 +1,16 @@
 import dogRandom
 import subprocess
 
+def bubbleSort(unsortedList):
+    n = len(unsortedList)
+     # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
+            if unsortedList[j] > unsortedList[j+1] :
+                unsortedList[j], unsortedList[j+1] = unsortedList[j+1], unsortedList[j]
+    return unsortedList
+    
 def removeDuplicates(unsortedList):
     sortedList = []
     for index,element in enumerate(unsortedList):
