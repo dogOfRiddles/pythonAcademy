@@ -1,6 +1,16 @@
 import dogRandom
 import subprocess
 
+def removeDuplicates(unsortedList):
+    sortedList = []
+    for index,element in enumerate(unsortedList):
+        if element in sortedList:
+            duplicate = True;
+        else:
+            sortedList.append(element)
+    return sortedList
+
+
 def fibonacci(requestedLength):
     if int(requestedLength < 2):
         requestedLength = 2
