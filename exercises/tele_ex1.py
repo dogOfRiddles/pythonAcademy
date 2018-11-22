@@ -7,5 +7,9 @@ api_hash = '3cf434b3393e0db93d9e007c30fc2f23'
 
 client = TelegramClient('session_name', api_id, api_hash)
 client.start()
-client.send_message('me','This message brought to you by Python3')
+
+me = client.get_me()
+print(me.stringify())
+
+#client.send_message('me','This message brought to you by Python3')
 client.disconnect()
