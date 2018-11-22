@@ -11,5 +11,5 @@ client.start()
 me = client.get_me()
 print(me.stringify())
 
-#client.send_message('me','This message brought to you by Python3')
+#client.send_message('House_catwife','')
 client.disconnect()
