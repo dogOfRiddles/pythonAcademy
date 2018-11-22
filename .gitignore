@@ -5,4 +5,5 @@ lib64/
 include/
 bin/
 pyvenv.cfg
+*.session
 academy_venv/
